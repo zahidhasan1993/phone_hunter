@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- daisyUI link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body id="body" class="container mx-auto">
+    <!-- header section  -->
+    <header>
+      <h1 class="text-6xl font-bold text-red-400 text-center mt-4">
+        welcome to my website
+      </h1>
+      <div
+        id="search_container"
+        class="text-center my-12 border border-b-black p-24"
+      >
+        <input
+          id="search_field"
+          type="text"
+          placeholder="Type here"
+          class="input w-full max-w-xs"
+        />
+        <button onclick="searchPhone()" id="search_btn" class="btn btn-error">
+          Search
+        </button>
+      </div>
+    </header>
+    <!-- main section  -->
+    <main>
+      <!-- card section  -->
+      <section
+        id="phone_container"
+        class="mt-10 grid sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-3"
+      ></section>
+      <h1 id="no_result" class="text-6xl text-red-600 font-bold invisible">
+        No Result Found
+      </h1>
+      <!-- loader  -->
+      <div class="text-center invisible" id="loder">
+        <button class="btn btn-square loading"></button>
+      </div>
+      <!-- show all btn  -->
+      <div id="show_all_container" class="text-center invisible">
+        <button onclick="showALL()" id="show_all_button" class="btn btn-error">
+          Show All
+        </button>
+      </div>
+    </main>
+
+    <!-- modal  -->
+    <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <img id="modal_img" src="" alt="">
+        <h3 class="font-bold text-lg" id="phone_name"></h3>
+        <p class="py-4">
+          ReleaseDate :  <span id="relesedate" ></span>  
+        </p>
+        <p class="py-4">
+          Display :  <span id="display" ></span>  
+        </p>
+        <p class=" py-4">
+          ChipSet :  <span id="chipset" ></span>  
+        </p>
+        <p class="py-4 ">
+          Memory :  <span id="memory" ></span> 
+        </p>
+        <p class="py-4">
+          Storage :  <span id="storage" ></span>  
+        </p>
+        <div class="modal-action">
+          <label for="my-modal-6" class="btn">Yay!</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- tailwind link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- js link  -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
